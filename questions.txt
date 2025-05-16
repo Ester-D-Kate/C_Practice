@@ -1,0 +1,58 @@
+Excellent! Solidifying the basics is key. Now, let's get your brain working with some intermediate-level C practice questions that touch upon pointers, arrays, dynamic memory, structures, and preprocessors.
+
+Question 1: Dynamic Array Resizing
+
+Write a set of functions to manage a dynamically resizing integer array:
+
+createDynamicArray(int initialCapacity): Allocates memory for an integer array with the given initial capacity and returns a pointer to the array along with its current size and capacity (you might want to use a struct to hold these).
+addElement(int *arr, int *size, int *capacity, int element): Adds an element to the end of the dynamic array. If the array is full (size equals capacity), it should double the capacity of the array using realloc before adding the element.
+getSize(const int *arr): Returns the current size of the dynamic array (assuming you've stored this information).
+getCapacity(const int *arr): Returns the current capacity of the dynamic array (assuming you've stored this information).
+freeDynamicArray(int *arr): Frees the memory allocated for the dynamic array.
+Write a main function to demonstrate the usage of these functions by creating a dynamic array, adding a few elements, printing its size and capacity at different stages, and finally freeing the memory.
+
+Question 2: Linked List Operations
+
+Implement a singly linked list to store strings:
+
+Define a structure Node that contains a string (you can use a fixed-size char array or dynamically allocate memory for each string) and a pointer to the next node.
+Implement the following functions:
+insertAtBeginning(Node **head, const char *data): Inserts a new node with the given string at the beginning of the list.
+insertAtEnd(Node **head, const char *data): Inserts a new node with the given string at the end of the list.
+printList(Node *head): Prints all the strings in the linked list.
+searchList(Node *head, const char *target): Searches for a given string in the list and returns 1 if found, 0 otherwise.
+deleteNode(Node **head, const char *target): Deletes the first node containing the given string from the list.
+freeList(Node *head): Frees all the memory allocated for the nodes in the linked list.
+Write a main function to test these linked list operations.
+
+Question 3: Array of Structures and Pointers
+
+Define a structure Person with the following members: name (a string), age (an integer), and height (a float).
+
+Create an array of Person structures (you can decide the initial size).
+Write a function findOldestPerson(struct Person *people, int size) that takes the array and its size as input and returns a pointer to the Person structure with the highest age. Handle the case of an empty array.
+Write a function printPerson(const struct Person *p) that takes a pointer to a Person structure and prints its members.
+In your main function, initialize the array with some Person data, call findOldestPerson to get a pointer to the oldest person, and then use printPerson to display their information.
+
+Question 4: Preprocessor Directives for Conditional Compilation
+
+Write a program that demonstrates conditional compilation using preprocessor directives:
+
+Define a macro DEBUG (e.g., #define DEBUG 1).
+Create a function processData(int value) that performs some operation.
+Inside processData, use #ifdef DEBUG and #endif to conditionally print debugging information (e.g., the input value) only when the DEBUG macro is defined.
+Use #ifndef RELEASE and #endif to include a warning message that is printed unless a RELEASE macro is defined.
+Use #if or #elif to define different behavior based on the value of a macro (e.g., if a macro VERSION is 1, print "Version 1"; if it's 2, print "Version 2").
+Write a main function that calls processData with some sample values and experiment with defining and undefining the DEBUG and RELEASE macros (and potentially a VERSION macro) before compiling to observe the different outputs.
+
+Question 5: String Manipulation with Pointers
+
+Write a function reverseString(char *str) that reverses a given string in-place using pointer manipulation. You should not use array indexing (str[i]).
+
+Write a main function to test this function with a sample string.
+
+Bonus Challenge:
+
+Combine concepts from multiple questions. For instance, create a dynamic array of Person structures (using dynamic memory allocation and resizing) and implement a function to sort this array based on age using a comparison function passed via a function pointer (similar to qsort).
+
+These questions should give you a good workout and help solidify your understanding of the intermediate C concepts. Take your time, break down each problem into smaller steps, and don't hesitate to refer back to examples or documentation if needed. Good luck, and let me know if you have any questions as you work through them!
