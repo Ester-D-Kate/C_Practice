@@ -37,7 +37,7 @@ deleteNode(Node **head, const char *target): Deletes the first node containing t
 freeList(Node *head): Frees all the memory allocated for the nodes in the linked list.
 Write a main function to test these linked list operations.
 
-Question 3: Array of Structures and Pointers 
+Question 3: Array of Structures and Pointers
 
 Define a structure Person with the following members: name (a string), age (an integer),
  and height (a float).
